@@ -1,0 +1,329 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: UI Newsroom\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Mon Mar 21 2016 16:02:44 GMT-0400 (Eastern Daylight Time)\n"
+"PO-Revision-Date: 2016-03-21 17:16-0400\n"
+"Last-Translator: admin <alexandrehenrylebel@urbanimmersive.com>\n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Loco-Target-Locale: fr_FR\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#. Name of the plugin
+msgid "UI Newsroom"
+msgstr "Salle de nouvelles"
+
+#. URI of the plugin
+msgid "http://www.urbanimmersive.com"
+msgstr "http://www.urbanimmersive.com"
+
+#. Description of the plugin
+msgid ""
+"UI Newsroom automatically sync your Urbanimmersive Newsrooms to your WordPress."
+msgstr ""
+"Ce plugin synchronisera votre salle de nouvelles Urbanimmersive avec votre "
+"WordPress"
+
+#. Author of the plugin
+msgid "Urbanimmersive"
+msgstr "Urbanimmersive"
+
+#: ../admin/class.ui-newsroom-admin.php:19
+#, php-format
+msgid ""
+"Your Urbanimmersive Newsroom is not yet configured. <a href=\"%s\">Please "
+"configure it here.</a>"
+msgstr ""
+"Votre salle de nouvelles Urbanimmersive n'est pas encore configurée. <a href="
+"\"%s\">Cliquez-ici pour la configurer.</a>"
+
+#: ../admin/class.ui-newsroom-admin.php:22
+#, php-format
+msgid ""
+"It seems your Urbanimmersive Newsroom is not syncing. <a href=\"%s\">Please "
+"visit the settings to find a solution.</a>"
+msgstr ""
+"Il semble que votre salle de nouvelles Urbanimmersive ne se synchronise pas. "
+"<a href=\"%s\">Visitez la page de configurations pour trouver une solution.</a>"
+
+#: ../admin/class.ui-newsroom-admin.php:78
+msgid "Edit this article in Urbanimmersive CMS"
+msgstr "Modifier cet article dans le CMS Urbanimmersive"
+
+#: ../admin/class.ui-newsroom-admin.php:91
+msgid "Return to Index"
+msgstr "Retournez à la page d'accueil"
+
+#: ../admin/class.ui-newsroom-admin.php:98
+#, php-format
+msgid ""
+"Please note that your Urbanimmersive Newsrooms is <strong>read-only</strong> "
+"in WordPress. Modifications need to be made in the <a href=\"%s\" target="
+"\"_blank\">Urbanimmersive CMS</a>."
+msgstr ""
+"Veuillez prendre en note que votre salle de nouvelles Urbanimmersive est "
+"<strong> en mode lecture seule</strong> dans WordPress. Pour effectuer des "
+"modifications, rendez-vous sur le <a href=\"%s\" target=\"_blank\">CMS "
+"Urbanimmersive</a>."
+
+#: ../admin/class.ui-newsroom-admin.php:118
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Vous n'avez pas suffisamment de permission pour accéder à cette page."
+
+#: ../admin/class.ui-newsroom-admin.php:125 ../admin/class.ui-newsroom-admin.php:
+#: 157
+msgid "Your credentials are invalid."
+msgstr "Vos informations de connexions ne sont pas valides."
+
+#: ../admin/class.ui-newsroom-admin.php:127 ../admin/class.ui-newsroom-admin.php:
+#: 155
+msgid "Your credentials are valid."
+msgstr "Vos informations de connexion sont valides."
+
+#: ../admin/class.ui-newsroom-admin.php:133
+msgid "Your newsroom was successfully updated."
+msgstr "Votre salle de nouvelle a été mise à jour."
+
+#: ../admin/class.ui-newsroom-admin.php:135
+msgid "Error during download."
+msgstr "Erreur durant le téléchargement."
+
+#: ../admin/class.ui-newsroom-admin.php:181
+msgid "Urbanimmersive API credentials"
+msgstr "Informations de connexion Urbanimmersive"
+
+#: ../admin/class.ui-newsroom-admin.php:187
+msgid "Client ID"
+msgstr "ID client"
+
+#: ../admin/class.ui-newsroom-admin.php:194
+msgid "Client Secret"
+msgstr "Secret client"
+
+#: ../admin/class.ui-newsroom-admin.php:202
+msgid "What should be fetched?"
+msgstr "Quels informations doivent être téléchargés"
+
+#: ../admin/class.ui-newsroom-admin.php:208
+msgid "Fetch articles"
+msgstr "Télécharger les articles"
+
+#: ../admin/class.ui-newsroom-admin.php:215
+msgid "Fetch categories"
+msgstr "Télécharger les catégories"
+
+#: ../admin/class.ui-newsroom-admin.php:222
+msgid "Fetch subscriptions"
+msgstr "Télécharger les abonnements"
+
+#: ../admin/class.ui-newsroom-admin.php:229
+msgid "Fetch publications"
+msgstr "Télécharger les publications"
+
+#: ../admin/class.ui-newsroom-admin.php:237
+msgid "What should be shown by default?"
+msgstr "Quoi afficher par défaut?"
+
+#: ../admin/class.ui-newsroom-admin.php:243
+msgid "Show articles"
+msgstr "Afficher les articles"
+
+#: ../admin/class.ui-newsroom-admin.php:250
+msgid "Show subscriptions"
+msgstr "Afficher les abonnements"
+
+#: ../admin/class.ui-newsroom-admin.php:257
+msgid "Show publications"
+msgstr "Afficher les publications"
+
+#: ../admin/class.ui-newsroom-admin.php:265 ../admin/views/settings.php:56
+msgid "Configurations"
+msgstr "Configurations"
+
+#: ../admin/class.ui-newsroom-admin.php:271
+msgid "Default author"
+msgstr "Auteur par défaut"
+
+#: ../admin/class.ui-newsroom-admin.php:278
+msgid "Download and host article images"
+msgstr "Télécharger et héberger les images"
+
+#: ../admin/class.ui-newsroom-admin.php:340
+#, php-format
+msgid ""
+"Enter your credentials below. If you do not have your credentials, you can get "
+"them free at : <a href=\"%s\" target=\"_blank\">%s</a>"
+msgstr ""
+"Entrez vos informations de connexion ci-dessous. Si vous n'avez pas vos "
+"informations de connexion, vous pouvez les obtenir gratuitement à: <a href=\"%s"
+"\" target=\"_blank\">%s</a>"
+
+#: ../admin/class.ui-newsroom-admin.php:344
+msgid ""
+"Select the custom posts types that will be added to the WordPress Query. "
+"Otherwise, your theme has to override the WordPress Query for each custom "
+"posts types for them to be shown on your pages."
+msgstr ""
+"Sélectionnez les postes personnalisés qui seront ajoutés à la requête "
+"WordPress. Autrement, votre thème devra s'occuper d'ajouter les postes "
+"personnalités pour que ceux-ci soient affichés sur vos pages. "
+
+#: ../admin/class.ui-newsroom-admin.php:349 ../admin/class.ui-newsroom-admin.php:
+#: 356 ../admin/class.ui-newsroom-admin.php:363 ../admin/class.ui-newsroom-admin.
+#: php:370 ../admin/class.ui-newsroom-admin.php:377 ../admin/class.ui-newsroom-
+#: admin.php:384 ../admin/class.ui-newsroom-admin.php:391 ../admin/class.ui-
+#: newsroom-admin.php:398
+msgid "Check to enable"
+msgstr "Activer"
+
+#: ../admin/class.ui-newsroom-admin.php:405
+msgid "Your data will be assigned to this author"
+msgstr "Vos informations seront assigné à cet auteur."
+
+#: ../admin/class.ui-newsroom-admin.php:417
+msgid "These settings should be kept secret"
+msgstr "Ces informations doivent rester secrétes"
+
+#: ../admin/views/settings.php:51
+msgid "Urbanimmersive Newsroom Settings"
+msgstr "Configurations de votre salle de nouvelles"
+
+#: ../admin/views/settings.php:52
+#, php-format
+msgid "Need help? Visit %s for more details."
+msgstr "Vous avez besoin d'aider? Visitez %s pour plus de détails."
+
+#: ../admin/views/settings.php:55 ../admin/views/settings.php:63
+msgid "Your newsroom"
+msgstr "Votre salle de nouvelles"
+
+#: ../admin/views/settings.php:57
+msgid "Debug tools"
+msgstr "Outils"
+
+#: ../admin/views/settings.php:67
+msgid "Newsroom"
+msgstr "Salle de nouvelles"
+
+#: ../admin/views/settings.php:72 ../admin/views/settings.php:139
+msgid "N/A"
+msgstr "N/D"
+
+#: ../admin/views/settings.php:77
+msgid "Your real-time update URL"
+msgstr "Votre adresse de mise à jour en temps réel"
+
+#: ../admin/views/settings.php:83
+#, php-format
+msgid ""
+"<a href=\"%s\" target=\"_blank\">Click here</a> to update your Urbanimmersive "
+"CMS Newsroom configurations"
+msgstr ""
+"<a href=\"%s\" target=\"_blank\">Cliquez-ici</a> pour mettre à jour les "
+"informations de votre salle de nouvelles."
+
+#: ../admin/views/settings.php:102
+msgid ""
+"Your Urbanimmersive Newsroom is not syncing. Please make sure your credentials "
+"are valid."
+msgstr ""
+"Votre salle de nouvelles Urbanimmersive n'est pas synchronisée. Veuillez vous "
+"assurer que vos informations sont valides."
+
+#: ../admin/views/settings.php:104
+#, php-format
+msgid ""
+"Your <strong>%s</strong> newsroom is not synced. Click the button below to "
+"sync now."
+msgstr ""
+"Votre salle de nouvelles <strong>%s</strong> n'est pas synchronisée. Cliquez "
+"sur le bouton ci-dessous pour la mettre à jour."
+
+#: ../admin/views/settings.php:107
+msgid "Sync newsroom"
+msgstr "Synchroniser"
+
+#: ../admin/views/settings.php:108 ../admin/views/settings.php:166
+msgid "Note: this can take a while"
+msgstr "Note: le processus peut être long"
+
+#: ../admin/views/settings.php:121
+msgid "Test your credentials"
+msgstr "Tester vos informations"
+
+#: ../admin/views/settings.php:122
+msgid ""
+"To make sure your integration with the Urbanimmersive API is working "
+"correctly, you can test the API credentials"
+msgstr ""
+"Pour s'assurer de votre intégration avec l'API Urbanimmersive, vous pouvez "
+"tester vos informations de connexion."
+
+#: ../admin/views/settings.php:128
+msgid "Test now"
+msgstr "Vérifier"
+
+#: ../admin/views/settings.php:130
+msgid "Test API credentials"
+msgstr "Vérifier les informations"
+
+#: ../admin/views/settings.php:134
+msgid "Result"
+msgstr "Résultat"
+
+#: ../admin/views/settings.php:137
+msgid "Success"
+msgstr "Succès"
+
+#: ../admin/views/settings.php:137
+msgid "Failed"
+msgstr "Échec"
+
+#: ../admin/views/settings.php:144
+msgid "Last test date"
+msgstr "Dernier test"
+
+#: ../admin/views/settings.php:149 ../admin/views/settings.php:175
+msgid "Never"
+msgstr "Jamais"
+
+#: ../admin/views/settings.php:156
+msgid "Manual update"
+msgstr "Mettre à jour"
+
+#: ../admin/views/settings.php:157
+msgid ""
+"Sometimes, WordPress can be out of sync with your Newsroom. You can manually "
+"update all your articles here."
+msgstr ""
+"WordPress peut parfois être désynchronisé avec votre salle de nouvelles. Vous "
+"pouvez mettre à jour manuellement votre salle de nouvelles ici."
+
+#: ../admin/views/settings.php:163 ../admin/views/settings.php:165
+msgid "Update now"
+msgstr "Mettre à jour"
+
+#: ../admin/views/settings.php:170
+msgid "Last update date"
+msgstr "Dernière mise à jour"
+
+#: ../includes/class.ui-newsroom.php:29
+msgid "UI Subscriptions"
+msgstr "Abonnements"
+
+#: ../includes/class.ui-newsroom.php:49
+msgid "UI Publications"
+msgstr "Publications"
