@@ -4,6 +4,7 @@ UI Newsroom automatically sync your Urbanimmersive Newsrooms with your WordPress
 
 Installation
 ===========
-You will need an [Urbanimmersive Newsroom API key](https://cms.urbanimmersive.com/) to use it.  Keys are free and can be obtained in minutes.
 
-Upload the UI Newsroom plugin to your WordPress, Activate it, then enter your [Urbanimmersive Newsroom API key](https://cms.urbanimmersive.com/).
+1. Unzip all files to the `/wp-content/plugins/ui-newsroom` directory
+2. Log into WordPress admin and activate the 'UI Newsroom' plugin through the 'Plugins' menu
+3. Go to *Settings > UI Newsroom* and add your Urbanimmersive API credentials

@@ -22,9 +22,12 @@ define( 'UINEWSROOM__PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'UINEWSROOM__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
 require 'plugin-update-checker/plugin-update-checker.php';
-$myUpdateChecker = PucFactory::buildUpdateChecker(
-    'http://static.urbanimmersive.com/wordpress/metadata.json',
-    __FILE__
+
+$className = PucFactory::getLatestClassVersion('PucGitHubChecker');
+$myUpdateChecker = new $className(
+    'https://github.com/UIGitHub/UIWPNewsroom/',
+    __FILE__,
+    'master'
 );
 
 require_once( UINEWSROOM__PLUGIN_DIR . 'includes/class.ui-newsroom.php' );
