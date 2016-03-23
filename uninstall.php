@@ -2,7 +2,7 @@
 /**
  *
  * @link       http://www.urbanimmersive.com
- * @since      0.9.0
+ * @since      0.9.1
  *
  * @package    ui-newsroom
  */

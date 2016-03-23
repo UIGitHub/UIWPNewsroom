@@ -517,6 +517,7 @@ class UiNewsroomApi {
             $post['post_type'] = 'ui_article';
             $post['post_title'] = $article_data['title'];
             $post['post_content'] = $article_content;
+            $post['post_excerpt'] = $article_data['description'];
             $post['post_status'] = 'publish';
             $post['post_date'] = $online_date;
             $post['post_modified'] = $modified_date;

@@ -31,6 +31,8 @@ You will need an [Urbanimmersive Newsroom API key](https://cms.urbanimmersive.co
 
 == Changelog ==
 
+= 0.9.1 =
+* Added the excerpt for the articles (based on the article description)
+
 = 0.9.0 =
 * First version published
-
