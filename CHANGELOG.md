@@ -1,3 +1,13 @@
+## 0.9.2
+
+Features:
+
+ - WPML integration (in progress)
+
+Bugs:
+
+ - UI Newsroom was not correcly updating
+
 ## 0.9.1
 
 Features:

@@ -264,6 +264,36 @@ class UiNewsroomApi {
             foreach($metas as $meta){
                 update_term_meta($category_id, $meta['key'], $meta['value']);
             }
+            //
+            if ( function_exists('icl_object_id') ) {
+                // WPML integration
+                //
+                $locale = 'en';
+                switch($category['locale']){
+                    case 'fra':
+                        $locale = 'fr';
+                        break;
+                }
+                //
+                $wpml_element_type = apply_filters( 'wpml_element_type', 'category' );
+                //
+                $get_language_args = array('element_id' => $category_id, 'element_type' => 'category' );
+                $original_post_language_info = apply_filters( 'wpml_element_language_details', null, $get_language_args );
+                //
+                $trid = false;
+                if(isset($original_post_language_info->trid)){
+                    $trid = $original_post_language_info->trid;
+                }
+                //
+                $set_language_args = array(
+                    'element_id' => $category_id,
+                    'element_type' => $wpml_element_type,
+                    'trid' => $trid,
+                    'language_code' => $locale,
+                    'source_language_code' => null
+                );
+                do_action( 'wpml_set_element_language_details', $set_language_args );
+            }
         }
         return $category_id;
     }
@@ -287,7 +317,7 @@ class UiNewsroomApi {
             $post_id = $posts[0]->ID;
             if($publication){
                 // do we need to update the post based on the modified date
-                $stored_publication_modified = get_post_meta( $post_id, 'ui_publication_modified');
+                $stored_publication_modified = get_post_meta( $post_id, 'ui_publication_modified', true);
                 $current_publication_modified = strtotime($publication['modified']);
                 //
                 if($current_publication_modified>$stored_publication_modified){
@@ -316,7 +346,7 @@ class UiNewsroomApi {
             $metas['ui_publication_modified'] = strtotime($publication_data['modified']);
             $metas['ui_publication_url'] = $url;
             $metas['ui_publication_type'] = $publication_data['object_type'];
-            $metas['ui_publication_data'] = serialize($publication_data['object_data']);
+            $metas['ui_publication_data'] = $publication_data['object_data'];
             //
             $post = array();
             if($post_id){
@@ -352,6 +382,37 @@ class UiNewsroomApi {
             $attach_id = $this->_downloadAndSaveImageAsAttachment($thumbnail, $id, $post_id, 'Thumbnail for publication #' . $post_id);
             //
             set_post_thumbnail( $post_id, $attach_id );
+            //
+            if ( function_exists('icl_object_id') ) {
+                // WPML integration
+                //
+                $locale = 'en';
+                switch($publication_data['locale']){
+                    case 'fra':
+                        $locale = 'fr';
+                        break;
+                }
+                //
+                $wpml_element_type = apply_filters( 'wpml_element_type', 'ui_publication' );
+                //
+                $get_language_args = array('element_id' => $post_id, 'element_type' => 'ui_publication' );
+                $original_post_language_info = apply_filters( 'wpml_element_language_details', null, $get_language_args );
+                //
+                $trid = false;
+                if(isset($original_post_language_info->trid)){
+                    $trid = $original_post_language_info->trid;
+                }
+                //
+                $set_language_args = array(
+                    'element_id' => $post_id,
+                    'element_type' => $wpml_element_type,
+                    'trid' => $trid,
+                    'language_code' => $locale,
+                    'source_language_code' => null,
+                    'check_duplicates' => false
+                );
+                do_action( 'wpml_set_element_language_details', $set_language_args );
+            }
         }
         return $post_id;
     }
@@ -375,7 +436,7 @@ class UiNewsroomApi {
             $post_id = $posts[0]->ID;
             if($article){
                 // do we need to update the post based on the modified date
-                $stored_article_modified = get_post_meta( $post_id, 'ui_subscription_modified');
+                $stored_article_modified = get_post_meta( $post_id, 'ui_subscription_modified', true);
                 $current_article_modified = strtotime($article['modified']);
                 //
                 if($current_article_modified>$stored_article_modified){
@@ -439,6 +500,37 @@ class UiNewsroomApi {
             $attach_id = $this->_downloadAndSaveImageAsAttachment($thumbnail, $id, $post_id, 'Thumbnail for subscription #' . $post_id);
             //
             set_post_thumbnail( $post_id, $attach_id );
+            //
+            if ( function_exists('icl_object_id') ) {
+                // WPML integration
+                //
+                $locale = 'en';
+                switch($article_data['locale']){
+                    case 'fra':
+                        $locale = 'fr';
+                        break;
+                }
+                //
+                $wpml_element_type = apply_filters( 'wpml_element_type', 'ui_subscription' );
+                //
+                $get_language_args = array('element_id' => $post_id, 'element_type' => 'ui_subscription' );
+                $original_post_language_info = apply_filters( 'wpml_element_language_details', null, $get_language_args );
+                //
+                $trid = false;
+                if(isset($original_post_language_info->trid)){
+                    $trid = $original_post_language_info->trid;
+                }
+                //
+                $set_language_args = array(
+                    'element_id' => $post_id,
+                    'element_type' => $wpml_element_type,
+                    'trid' => $trid,
+                    'language_code' => $locale,
+                    'source_language_code' => null,
+                    'check_duplicates' => false
+                );
+                do_action( 'wpml_set_element_language_details', $set_language_args );
+            }
         }
         return $post_id;
     }
@@ -462,7 +554,7 @@ class UiNewsroomApi {
             $post_id = $posts[0]->ID;
             if($article){
                 // do we need to update the post based on the modified date
-                $stored_article_modified = get_post_meta( $post_id, 'ui_article_modified');
+                $stored_article_modified = get_post_meta( $post_id, 'ui_article_modified', true);
                 $current_article_modified = strtotime($article['modified']);
                 //
                 if($current_article_modified>$stored_article_modified){
@@ -561,6 +653,37 @@ class UiNewsroomApi {
             }
             if($category_id&&isset($categories_relations[$category_id])){
                 wp_set_post_categories($post_id, $categories_relations[$category_id]);
+            }
+            //
+            if ( function_exists('icl_object_id') ) {
+                // WPML integration
+                //
+                $locale = 'en';
+                switch($article_data['locale']){
+                    case 'fra':
+                        $locale = 'fr';
+                        break;
+                }
+                //
+                $wpml_element_type = apply_filters( 'wpml_element_type', 'ui_article' );
+                //
+                $get_language_args = array('element_id' => $post_id, 'element_type' => 'ui_article' );
+                $original_post_language_info = apply_filters( 'wpml_element_language_details', null, $get_language_args );
+                //
+                $trid = false;
+                if(isset($original_post_language_info->trid)){
+                    $trid = $original_post_language_info->trid;
+                }
+                //
+                $set_language_args = array(
+                    'element_id' => $post_id,
+                    'element_type' => $wpml_element_type,
+                    'trid' => $trid,
+                    'language_code' => $locale,
+                    'source_language_code' => null,
+                    'check_duplicates' => false
+                );
+                do_action( 'wpml_set_element_language_details', $set_language_args );
             }
         }
         return $post_id;

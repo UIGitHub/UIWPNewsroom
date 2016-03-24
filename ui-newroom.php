@@ -3,7 +3,7 @@
 Plugin Name:       UI Newsroom
 Plugin URI:        http://www.urbanimmersive.com
 Description:       UI Newsroom automatically sync your Urbanimmersive Newsrooms to your WordPress.
-Version:           0.9.1
+Version:           0.9.2
 Author:            Urbanimmersive
 Author URI:        http://www.urbanimmersive.com
 Text Domain:       ui-newsroom
@@ -16,7 +16,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 
-define( 'UINEWSROOM_VERSION', '0.9.1' );
+define( 'UINEWSROOM_VERSION', '0.9.2' );
 define( 'UINEWSROOM__MINIMUM_WP_VERSION', '4.0' );
 define( 'UINEWSROOM__PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'UINEWSROOM__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
