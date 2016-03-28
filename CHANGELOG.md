@@ -2,7 +2,7 @@
 
 Features:
 
- - WPML integration (in progress)
+ - WPML integration (English and French)
 
 Bugs:
 

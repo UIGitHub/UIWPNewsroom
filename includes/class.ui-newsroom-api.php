@@ -61,6 +61,7 @@ class UiNewsroomApi {
         //
         // 10 mins should be enough
         @set_time_limit(600);
+        @ini_set('memory_limit','256M');
         //
         $configurations = $this->getConfigurations();
         //
@@ -408,8 +409,7 @@ class UiNewsroomApi {
                     'element_type' => $wpml_element_type,
                     'trid' => $trid,
                     'language_code' => $locale,
-                    'source_language_code' => null,
-                    'check_duplicates' => false
+                    'source_language_code' => null
                 );
                 do_action( 'wpml_set_element_language_details', $set_language_args );
             }
@@ -526,8 +526,7 @@ class UiNewsroomApi {
                     'element_type' => $wpml_element_type,
                     'trid' => $trid,
                     'language_code' => $locale,
-                    'source_language_code' => null,
-                    'check_duplicates' => false
+                    'source_language_code' => null
                 );
                 do_action( 'wpml_set_element_language_details', $set_language_args );
             }
@@ -666,13 +665,43 @@ class UiNewsroomApi {
                 }
                 //
                 $wpml_element_type = apply_filters( 'wpml_element_type', 'ui_article' );
-                //
-                $get_language_args = array('element_id' => $post_id, 'element_type' => 'ui_article' );
-                $original_post_language_info = apply_filters( 'wpml_element_language_details', null, $get_language_args );
-                //
                 $trid = false;
-                if(isset($original_post_language_info->trid)){
-                    $trid = $original_post_language_info->trid;
+                $source_language_code = null;
+                //
+                // if we have one or many translations
+                if(!empty($article_data['translations'])){
+                    // find the first trid, if available
+                    foreach($article_data['translations'] as $translation){
+                        $argsForArticles = array(
+                            'meta_key' => 'ui_article_id',
+                            'meta_value' => $translation['article_id'],
+                            'post_type' => 'ui_article',
+                            'post_status' => 'any',
+                            'posts_per_page' => -1
+                        );
+                        $postsArticles = get_posts($argsForArticles);
+                        //
+                        if(!empty($postsArticles)){
+                            $postArticleId = $postsArticles[0]->ID;
+                            $get_language_args = array('element_id' => $postArticleId, 'element_type' => 'ui_article' );
+                            $original_post_language_info = apply_filters( 'wpml_element_language_details', null, $get_language_args );
+                            //
+                            if(isset($original_post_language_info->trid)){
+                                $trid = $original_post_language_info->trid;
+                                $source_language_code = $original_post_language_info->language_code;
+                                break;
+                            }
+                        }
+                    }
+                }
+                //
+                if(!$trid){
+                    $get_language_args = array('element_id' => $post_id, 'element_type' => 'ui_article' );
+                    $original_post_language_info = apply_filters( 'wpml_element_language_details', null, $get_language_args );
+                    //
+                    if(isset($original_post_language_info->trid)){
+                        $trid = $original_post_language_info->trid;
+                    }
                 }
                 //
                 $set_language_args = array(
@@ -680,8 +709,7 @@ class UiNewsroomApi {
                     'element_type' => $wpml_element_type,
                     'trid' => $trid,
                     'language_code' => $locale,
-                    'source_language_code' => null,
-                    'check_duplicates' => false
+                    'source_language_code' => $source_language_code
                 );
                 do_action( 'wpml_set_element_language_details', $set_language_args );
             }

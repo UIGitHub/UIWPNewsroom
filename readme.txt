@@ -32,7 +32,7 @@ You will need an [Urbanimmersive Newsroom API key](https://cms.urbanimmersive.co
 == Changelog ==
 
 = 0.9.2 =
-* WPML integration (in progress)
+* WPML integration (English and French)
 * Bug: UI Newsroom was not correcly updating
 
 = 0.9.1 =
